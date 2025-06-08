@@ -1,4 +1,6 @@
 function onMessageSendHandler(event) {
+  console.log("DEBUG 1");
+                            console.log(event);
   const item = Office.context.mailbox.item;
 
   let to = "";
