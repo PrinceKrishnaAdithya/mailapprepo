@@ -3,7 +3,14 @@ console.log("Debug: launchevent.js file loaded");
 
 Office.onReady(() => {
     console.log("Debug: Office.onReady called");
-    // Your existing code
+    console.log("Debug: Registering onMessageSendHandler");
+    
+    // MOVE THIS INSIDE Office.onReady()
+    Office.actions.associate("onMessageSendHandler", onMessageSendHandler);
+    
+    console.log("Debug: Handler registered successfully");
+}).catch((error) => {
+    console.error("Debug: Office.js failed:", error);
 });
 
 function onMessageSendHandler(event) {
