@@ -1,3 +1,11 @@
+// At the very top of launchevent.js
+console.log("Debug: launchevent.js file loaded");
+
+Office.onReady(() => {
+    console.log("Debug: Office.onReady called");
+    // Your existing code
+});
+
 function onMessageSendHandler(event) {
   console.log("DEBUG 1a");
   console.log(event);
